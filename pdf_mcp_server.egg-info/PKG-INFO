@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: pdf-mcp-server
+Version: 0.1.0
+Summary: Educational PDF management MCP server: FastAPI + MCP + Apache Lucene (PyLucene)
+Requires-Python: >=3.11
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: mcp<3,>=2
+Requires-Dist: pypdf
+Requires-Dist: reportlab
+Requires-Dist: pydantic>=2
+Requires-Dist: pydantic-settings
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: httpx; extra == "dev"

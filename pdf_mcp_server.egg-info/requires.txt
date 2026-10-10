@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+mcp<3,>=2
+pypdf
+reportlab
+pydantic>=2
+pydantic-settings
+
+[dev]
+pytest
+httpx

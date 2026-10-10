@@ -1,0 +1,27 @@
+[project]
+name = "pdf-mcp-server"
+version = "0.1.0"
+description = "Educational PDF management MCP server: FastAPI + MCP + Apache Lucene (PyLucene)"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "mcp>=2,<3",
+    "pypdf",
+    "reportlab",
+    "pydantic>=2",
+    "pydantic-settings",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "httpx"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# The JVM raises handled access violations at startup; faulthandler would print them as crashes.
+addopts = "-p no:faulthandler"
+pythonpath = ["."]
+
+
+[tool.setuptools]
+packages = ["app"]
